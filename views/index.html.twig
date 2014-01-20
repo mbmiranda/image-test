@@ -8,11 +8,18 @@
 <body>
     <div class="jumbotron">
             <h1>test</h1>
-            <form action="" method="post" enctype="multipart/form-data">
-                <input  id="name" type="text" name="name" class="form-control" placeholder="Name">
-                <input  id="file" type="file" name="file">
-                <button id="submit" type="submit" class="btn btn-success">Submit</button>
+            <form id="imageForm" action="" method="post" enctype="multipart/form-data">
+                <input  id="name" type="text" name="name" class="form-control" placeholder="Name" required>
+                <input  id="file" type="file" name="file" onchange="submitForm()" required>
+                <button id="submit"  name="submit" type="submit" class="btn btn-success">Submit</button>
             </form>
     </div>
+        
+    <script>
+    function submitForm()
+    {
+        document.getElementById("imageForm").submit.click();
+    }
+    </script>
 </body>
 </html>
