@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en" ng-app="ltwApp">
+<head>
+  <meta charset="utf-8">
+  <title>Test</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+</head>
+<body>
+    <div class="jumbotron">
+            {% for message in app.session.getFlashBag.get('message') %}
+                <h1>{{ message }}</h1>
+            {% endfor %}
+    </div>
+</body>
+</html>
